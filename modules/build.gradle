@@ -427,6 +427,10 @@ gradle.beforeProject {
 	}
 }
 
+subprojects {
+	task allDependencies(type: DependencyReportTask)
+}
+
 if (bndPrintJarFiles != null) {
 	gradle.buildFinished {
 		bndPrintJarFiles.each {
